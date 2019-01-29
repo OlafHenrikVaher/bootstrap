@@ -9,4 +9,4 @@
 {{- $input_filtered := (replaceRE `class="(bd-placeholder-img(-lg )? ?)*` `class="` $input_filtered) -}}
 {{- $input_filtered := (replace $input_filtered ` class=""` "") -}}
 
-{{ highlight $input_filtered $lang "" }}
+{{ highlight (trim $input_filtered "\n") $lang "" }}
